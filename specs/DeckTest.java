@@ -22,8 +22,8 @@ public class DeckTest{
  @Test 
  public void testDeck(){
   cards.createDeck();
-  ArrayList<card_game.Card>all_cards = cards.getDeck();
-  card_game.Card test_card = all_cards.get(0);
+  ArrayList<Card>all_cards = cards.getDeck();
+  Card test_card = all_cards.get(0);
   assertEquals(1, test_card.getValue());
  }
 }

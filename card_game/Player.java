@@ -1,10 +1,10 @@
-package card_game;
+// package card_game;
 
-public class Player{
+// public class Player{
 
-  ArrayList<Card> playerHand;
+//   ArrayList<Card> playerHand;
 
-  public Player(ArrayList<Card> playerHand){
-    this.playerHand = playerHand;
-  }
-}
+//   public Player(ArrayList<Card> playerHand){
+//     this.playerHand = playerHand;
+//   }
+// }
