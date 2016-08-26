@@ -1,10 +1,30 @@
-// package card_game;
+package card_game;
+import java.util.*;
 
-// public class Player{
+public class Player{
 
-//   ArrayList<Card> playerHand;
+  private ArrayList<Card> playerHand;
+  private Boolean current;
 
-//   public Player(ArrayList<Card> playerHand){
-//     this.playerHand = playerHand;
-//   }
-// }
+  public Player(){
+    this.playerHand = new ArrayList<Card>();
+    this.current = false;
+  }
+
+  public Boolean current(){
+    return this.current;
+  }
+
+  // setter method for current
+  public void setCurrent(Boolean truse){
+    this.current = truse;
+  }
+
+  public void assignCard(Card card){
+    this.playerHand.add(card);
+  }
+
+  public int handSize(){
+    return playerHand.size();
+  }
+}

@@ -19,25 +19,15 @@ public class Deck{
   }
 
   public void createDeck(){
-    for (int i = 1; i < 14; i++){
-      Card card = new Card(i, SuitType.DIAMONDS);
-      cards.add(card);
+    for(ValueType val : ValueType.values()){
+      for(SuitType suit : SuitType.values()){
+          Card card = new Card(val, suit);
+          cards.add(card);
+      }
     }
-
-    for (int i = 1; i < 14; i++){
-      Card card = new Card(i, SuitType.HEARTS);
-      cards.add(card);
-    }
-
-    for (int i = 1; i < 14; i++){
-      Card card = new Card(i, SuitType.SPADES);
-      cards.add(card);
-    }
-
-    for (int i = 1; i < 14; i++){
-      Card card = new Card(i, SuitType.CLUBS);
-      cards.add(card);
-    }
+    Collections.shuffle(cards);
   }
+
+
 
 }

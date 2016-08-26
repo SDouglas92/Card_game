@@ -19,11 +19,11 @@ public class DeckTest{
     assertEquals(52, cards.getDeckSize());
   }
 
- @Test 
- public void testDeck(){
-  cards.createDeck();
-  ArrayList<Card>all_cards = cards.getDeck();
-  Card test_card = all_cards.get(0);
-  assertEquals(1, test_card.getValue());
- }
+ // @Test 
+ // public void testDeck(){
+ //  cards.createDeck();
+ //  ArrayList<Card>all_cards = cards.getDeck();
+ //  Card test_card = all_cards.get(0);
+ //  assertEquals(1, test_card.getValue());
+ // }
 }
