@@ -12,14 +12,10 @@ public class Dealer {
       this.players = players;
     }
 
-    public void deal(){
+    public void deal(int playerIndex){
       Card card = deck.remove(0);
-      Player currentPlayer = players.get(0);
-      for(Player player : players){
-        if (player.current() == true)
-          currentPlayer = player; 
-
-      }
-      currentPlayer.assignCard(card);
+      Player currentPlayer = players.get(playerIndex);
+        currentPlayer.assignCard(card);
+        currentPlayer.handTotal();
     }
 }

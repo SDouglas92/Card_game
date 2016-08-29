@@ -22,8 +22,7 @@ public class DealerTest {
 
   @Test
   public void assignCardToPlayer(){
-    player.setCurrent(true);
-    dealer.deal();
+    dealer.deal(0);
     assertEquals(1, player.handSize());
   }
 

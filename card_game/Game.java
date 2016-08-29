@@ -1,4 +1,57 @@
 package card_game;
+import java.util.*;
+
+
+public class Game {
+
+  private int currentPlayerIndex;
+  private ArrayList<Player> players;
+  private Dealer dealer;
+  private GameLogic gameLogic;
+
+  public Game(Dealer dealer, ArrayList<Player> players, GameLogic gameLogic){
+    this.currentPlayerIndex = 0;
+    this.players = players;
+    this.dealer = dealer;
+    this.gameLogic = gameLogic;
+    Scanner scanner = new Scanner(System.in);
+  }
+
+  public int getCurrentIndex(){
+    return currentPlayerIndex;
+  }
+
+  public void changeCurrentPlayer(){
+    currentPlayerIndex = ((currentPlayerIndex + 1) % players.size());
+  }
+
+  public void initialDeal(){
+    for(int i=0; i<(players.size() * 2); i++){
+      dealer.deal(getCurrentIndex());
+      changeCurrentPlayer();
+    }
+  }
+
+  public void playerTurn(){
+    Player currentPlayer = players.get(getCurrentIndex());
+      Sytsem.out.println(currentPlayer.getHandTotal());
+
+      while (currentPlayer.checkBust() != true){
+        System.out.println("Stick or Twist?");
+          String userInput = scanner.next();
+        if(userInput == "Twist"){
+          dealer.deal(getCurrentIndex());
+        else 
+          continue;
+        
+        }
+      }
+      gameLogic.checkNotBust(getCurrentIndex());
+      System.out.println(currentPlayer.getHandTotal());
+    }
+      changeCurrentPlayer();
+  }
+}
 
 // Contains game logic and method to start game and run through turns 
 

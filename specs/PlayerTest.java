@@ -12,15 +12,17 @@ public class PlayerTest {
     player = new Player();
   }
 
-  @Test 
-  public void playerNotCurrent(){
-    assertEquals(false, player.current());
+  @Test
+  public void playerHandEmpty(){
+    assertEquals(0, player.handSize());
   }
 
   @Test
-  public void playerIsCurrent(){
-    player.setCurrent(true);
-    assertEquals(true, player.current());
+  public void playerCanBust(){
+    player.setBust();
+    assertEquals(true, player.checkBust());
   }
+  
+  
 
 }
